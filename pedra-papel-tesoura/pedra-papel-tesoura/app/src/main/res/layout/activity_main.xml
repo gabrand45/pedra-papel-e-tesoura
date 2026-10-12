@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha do aplicativo"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imgApp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Escolha do aplicativo"
+        android:src="@drawable/padrao" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Faça sua jogada!"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <!-- Placar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtVitorias"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Vitórias: 0"
+            android:textColor="#1E8449"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtDerrotas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Derrotas: 0"
+            android:textColor="#C0392B"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtEmpates"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Empates: 0"
+            android:textColor="#7F8C8D"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Sua escolha"
+        android:textSize="18sp" />
+
+    <!-- Escolhas do usuário: nomes padronizados imgPedra / imgPapel / imgTesoura -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgPedra"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:contentDescription="Pedra"
+            android:onClick="selecionadoPedra"
+            android:src="@drawable/pedra" />
+
+        <ImageView
+            android:id="@+id/imgPapel"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:contentDescription="Papel"
+            android:onClick="selecionadoPapel"
+            android:src="@drawable/papel" />
+
+        <ImageView
+            android:id="@+id/imgTesoura"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:contentDescription="Tesoura"
+            android:onClick="selecionadoTesoura"
+            android:src="@drawable/tesoura" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:onClick="zerarPlacar"
+        android:text="Zerar placar" />
+
+</LinearLayout>
